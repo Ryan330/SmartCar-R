@@ -1,0 +1,219 @@
+/*Webpage Designs*/
+body {
+    font-family: sans-serif;
+
+    background-color: rgb(0, 73, 141);
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/*Custom Font Designs*/
+/*SmartCar-R Logo Font*/
+@font-face {
+    font-family: "SmartCarRFont";
+    src: url("fonts/SmartCarRFont/bluejuly.ttf");
+}
+
+/*Control Buttons Font*/
+@font-face {
+    font-family: "ControlsFont";
+    src: url("fonts/ControlsFont/LOVE-BOX-demo.ttf");
+}
+
+
+
+
+/*Header Designs*/
+.customHeader {
+    background-color: rgb(34, 34, 34);
+
+    height: 80px;
+    width: 100%;
+
+    -webkit-box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:    2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:         2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*Site Logo*/
+.customHeaderLeft {
+    padding: 28px;
+
+    justify-content: flex-start;
+}
+
+.customHeaderLeft a {
+    font-family: "SmartCarRFont";
+    font-size: 48px;
+
+    padding: 2px;
+
+    color: rgb(255, 255, 255);
+
+    text-decoration: none;
+}
+
+.customHeaderLeft a:hover {
+    color: rgb(253, 213, 80);
+}
+
+
+/*React Logo*/
+.reactLogo {
+    font-family: "SmartCarRFont";
+    font-size: 44px;
+
+    color: rgb(101, 219, 255);
+
+    height: 80px;
+}
+
+
+/*About*/
+.customHeaderRight {
+    padding: 32px;
+    
+    justify-content: flex-end;
+}
+
+.customHeaderRight a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+    color: rgb(255, 255, 255);
+
+    text-decoration: none;
+}
+
+.customHeaderRight a:hover {
+    color: rgb(253, 213, 80);
+}
+
+
+
+
+/*Main Page Designs*/
+.mainContainer {
+    color: rgb(255, 255, 255);
+
+    height: 100%;
+    width: 100%;
+
+    margin-top: 3%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/*Video Container*/
+.videoContainer {
+    background-color: rgb(34, 34, 34);
+
+    height: 400px;
+    width: 640px;
+    
+    border-radius: 14px;
+
+    -webkit-box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:    2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:         2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoBox {
+    background-image: url("images/videoStatic.gif");
+
+    height: 350px;
+    width: 590px;
+
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 14px;
+
+    -webkit-box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:    2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:         2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Controls Display Designs*/
+.controlsContainer {
+    color: rgb(255, 255, 255);
+
+    height: 64px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*Controls Box Title*/
+.controlsContainer span {
+    padding: 8px;
+}
+
+/*Toggle Lights Box*/
+.toggleLightsControlsBox {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    height: 116px;
+    width: 18.4%;
+
+    margin-top: 3%;
+    margin-left: 3%;
+    padding: 4px;
+
+    border-radius: 14px;
+    
+    -webkit-box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:    2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:         2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*Movement Box*/
+.movementControlsBox {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    height: 108px;
+    width: 31.3%;
+
+    margin-top: 3%;
+    margin-right: 3%;
+    padding: 8px;
+
+    border-radius: 14px;
+    
+    -webkit-box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:    2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:         2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*Control Button*/
+.controlButton {
+    font-family: "ControlsFont";
+    font-size: 64px;
+
+    letter-spacing: 40px;
+}
+
+#controlsBoxTitle {
+    font-size: 20px;
+}
