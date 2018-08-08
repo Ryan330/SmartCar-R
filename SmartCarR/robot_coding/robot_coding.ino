@@ -1,4 +1,5 @@
-//Init SmartCar-R
+//Init Robot and Controls
+//Robot Stats
 #define ENA 5 // left motor speed
 #define ENB 6 // right motor speed
 #define IN1 7 // left front wheel
@@ -10,6 +11,38 @@
 unsigned char carSpeed = 200;
 bool state = LOW;
 char getstr;
+
+
+//Init Serial Connection
+void setup() {
+    Serial.begin(9600);
+    pinMode(LED, OUTPUT); 
+    pinMode(IN1,OUTPUT);
+    pinMode(IN2,OUTPUT);
+    pinMode(IN3,OUTPUT);
+    pinMode(IN4,OUTPUT);
+    pinMode(ENA,OUTPUT);
+    pinMode(ENB,OUTPUT);
+    stop();
+}
+
+//Robot Status Report
+void loop() {
+    // put your main code here, to run repeatedly:
+    Serial.println("Robot Running!");
+    delay(3000);
+
+    getstr = Serial.read();
+    switch(getstr) {
+        case 38: forward(); break;
+        case 40: reverse();   break;
+        case 37: left();   break;
+        case 39: right();  break;
+        case 15: stop();   break;
+        case 14: stateChange(); break;
+        default:  break;
+  }
+}
 
 
 
@@ -128,33 +161,4 @@ void stateChange() {
     digitalWrite(LED, state);
     Serial.println("Light");
     Serial.flush();
-}
-
-
-
-
-//Set Controls
-void setup() { 
-    Serial.begin(9600);
-    pinMode(LED, OUTPUT); 
-    pinMode(IN1,OUTPUT);
-    pinMode(IN2,OUTPUT);
-    pinMode(IN3,OUTPUT);
-    pinMode(IN4,OUTPUT);
-    pinMode(ENA,OUTPUT);
-    pinMode(ENB,OUTPUT);
-    stop();
-}
-
-void loop() { 
-    getstr = Serial.read();
-    switch(getstr){
-        case 38: forward(); break;
-        case 40: back();   break;
-        case 37: left();   break;
-        case 39: right();  break;
-        case "x": stop();   break;
-        case "p": stateChange(); break;
-        default:  break;
-  }
 }
