@@ -1,17 +1,31 @@
+//Init Express.js
+const express = require("express");
+const app = express();
+
+const static = express.static;
+const expressHbs = require("express-handlebars");
+
+app.engine(".hbs", expressHbs({defaultLayout: "layout", extname: ".hbs"}));
+app.set("view engine", ".hbs");
+
+app.use(static("public"));
+
+
+
+
 //Init Bluetooth Connection
 let sPort = require("serialport");
-let serialPort = sPort.serialPort;
-let portName = process.argv[2];
+let readLine = sPort.parsers.Readline;
+let robotPort = "/dev/tty.usbmodem411";
 
-let myPort = new serialPort(portName, {
+let myPort = new sPort(robotPort, {
     baudRate: 9600,
-    parser: sPort.parsers.Readline("\r\n")
+    parser: new readLine("\r\n")
 });
 
 
 //Checks for Connection
 myPort.on("open", robotStart);
-myPort.on("data", robotRunning);
 
 
 //Robot Functionality
@@ -19,7 +33,14 @@ function robotStart() {
     console.log("Connection Started!");
 }
 
-function robotRunning(data) {
-    console.log("Robot Currently Running!");
-    return(data);
-}
+
+app.get("/", function(request, response) {
+    response.render("controlRobot");
+    myPort.write(38);
+});
+
+
+//Create Server
+app.listen(5000, () => {
+    console.log(`Server: http://localhost:5000`);
+});

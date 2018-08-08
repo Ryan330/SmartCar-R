@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
     "nodemon": "^1.18.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -16,7 +17,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "robot": "nodemon connectRobot.js COM16"
+    "eject": "react-scripts eject"
   }
 }
