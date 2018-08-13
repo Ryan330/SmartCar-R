@@ -5,12 +5,15 @@ import React, {Component} from "react";
 //Object Imports
 import Header from "./template/Header";
 import Dashboard from "./template/Dashboard";
-
-
+import Controller from "./scripts/Controller"
 
 
 //Render Page
 class App extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         //Site Content
         return (
@@ -23,12 +26,14 @@ class App extends Component {
                 {/*Dashboard Content*/}
                 <Dashboard/>
 
+
+                {/*Robot Controller*/}
+                <Controller/>
+
             </div>
         );
     }
 }
-
-
 
 
 //Export Application

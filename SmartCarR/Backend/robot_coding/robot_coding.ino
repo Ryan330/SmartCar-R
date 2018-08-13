@@ -1,44 +1,16 @@
-//Init Robot and Controls
-//Robot Stats
-#define ENA 5 // left motor speed
-#define ENB 6 // right motor speed
-#define IN1 7 // left front wheel
-#define IN2 8 // left rear wheel
-#define IN3 9 //right rear wheel
-#define IN4 11 // right front wheel
-#define LED 13
+//Init Robot
+#define ENA 5 //Left Motor Speed
+#define ENB 6 //Right Motor Speed
+#define IN1 7 //Left Front Wheel
+#define IN2 8 //Left Rear Wheel
+#define IN3 9 //Right Rear Wheel
+#define IN4 11 //Right Rear Wheel
+#define LED 13 //LED Lights
+
 
 unsigned char carSpeed = 200;
 bool state = LOW;
 char getstr;
-
-
-//Init Serial Connection
-void setup() {
-    Serial.begin(9600);
-    pinMode(LED, OUTPUT); 
-    pinMode(IN1,OUTPUT);
-    pinMode(IN2,OUTPUT);
-    pinMode(IN3,OUTPUT);
-    pinMode(IN4,OUTPUT);
-    pinMode(ENA,OUTPUT);
-    pinMode(ENB,OUTPUT);
-    stop();
-}
-
-//Robot Controls
-void loop() {
-    getstr = Serial.read();
-    switch(getstr) {
-        case 38: forward(); break;
-        case 40: reverse();   break;
-        case 37: left();   break;
-        case 39: right();  break;
-        case 15: stop();   break;
-        case 14: stateChange(); break;
-        default:  break;
-  }
-}
 
 
 
@@ -152,9 +124,42 @@ void stop() {
 
 
 //Toggle Light
-void stateChange() {
+void lightToggle() {
     state = !state;
     digitalWrite(LED, state);
     Serial.println("Light");
     Serial.flush();
 }
+
+
+
+
+//Init Serial Connection
+void setup() {
+    Serial.begin(9600);
+    pinMode(LED, OUTPUT);
+    pinMode(IN1,OUTPUT);
+    pinMode(IN2,OUTPUT);
+    pinMode(IN3,OUTPUT);
+    pinMode(IN4,OUTPUT);
+    pinMode(ENA,OUTPUT);
+    pinMode(ENB,OUTPUT);
+    stop();
+}
+
+//Robot Controls
+void loop() {
+    getstr = Serial.read();
+    Serial.println(getstr);
+    digitalWrite(getstr, state);
+    switch(getstr) {
+        case 'w': forward(); break;
+        case 's': reverse();   break;
+        case 'a': left(); break;
+        case 'd': right(); break;
+        case 'k': stop(); break;
+        case 'l': lightToggle(); break;
+        default: break;
+    }
+}
+
