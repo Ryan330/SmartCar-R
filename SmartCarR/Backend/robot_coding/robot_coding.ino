@@ -161,5 +161,6 @@ void loop() {
         case 'l': lightToggle(); break;
         default: break;
     }
+    delay(100);
 }
 

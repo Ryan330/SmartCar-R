@@ -23,12 +23,10 @@ const wss = new WebSocket.Server({
 
 //Init Serial Connection
 const sPort = require("serialport");
-var readLine = sPort.parsers.Readline;
 var robotPort = "/dev/ttyACM0";
 
 var myPort = new sPort(robotPort, {
-    baudRate: 115200,
-    parser: new readLine("\r\n")
+    baudRate: 9600
 });
 
 
@@ -37,7 +35,7 @@ var myPort = new sPort(robotPort, {
 myPort.on("open", function robotStart() {console.log("Connection Started!")});
 
 //Connection Running
-myPort.on("data", function robotData(data) {console.log(data.toString("utf8"))});
+//myPort.on("data", function robotData(data) {console.log(data.toString("utf8"))});
 
 
 
