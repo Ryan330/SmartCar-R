@@ -1,6 +1,6 @@
 # SmartCar-R
 
-SmartCar-R is an arduino-powered robot car that is manipulated with a Raspberry Pi 3. The car is manually controlled by an end-user 
+SmartCar-R is an Arduino-powered robot car that is manipulated with a Raspberry Pi 3. The car is manually controlled by an end-user 
 via a React user interface that gives the end-user the ability to manipulate the robot's movement via keyboard inputs. The interface 
 also displays a Raspberry Pi Camera's footage from a first-person perspective.
 
