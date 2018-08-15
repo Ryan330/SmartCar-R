@@ -2,9 +2,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-//React Logo
-import logo from "../logo.svg";
-
 
 //Render Header
 class Header extends React.Component {
