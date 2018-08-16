@@ -115,7 +115,7 @@ void right() {
 
 
 //Brake
-void stop() {
+void stopActions() {
     digitalWrite(ENA,LOW);
     digitalWrite(ENB,LOW);
     Serial.println("Stop!");
@@ -157,7 +157,7 @@ void loop() {
         case 's': reverse();   break;
         case 'a': left(); break;
         case 'd': right(); break;
-        case 'k': stop(); break;
+        case 'k': stopActions(); break;
         case 'l': lightToggle(); break;
         default: break;
     }
