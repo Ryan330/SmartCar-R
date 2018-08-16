@@ -7,6 +7,8 @@ also displays a Raspberry Pi Camera's footage from a first-person perspective.
 This robot was created as my final DigitalCrafts project! The project was presented at the "Demo Day" public event in the Atlana 
 Tech Village facility. The name of the overall project is based on the robot's concept and developers name. (SmartCar-R | SmartCar-Ryan)
 
+<img src="screenshots/Screen 1" width="600" height="350"/>
+<img src="screenshots/Screen 2" width="600" height="350"/>
 
 ## Authors
 * **Ryan Miller** - [Ryan's GitHub](https://github.com/Ryan330)
@@ -19,15 +21,16 @@ Tech Village facility. The name of the overall project is based on the robot's c
 * Node.js
 * Express.js
 * Serial Port
-* WebSocket
 * C++
 * HTML
 * CSS
 * Visual Studio Code
 * Arduino
 * Raspberry Pi 3
-* Raspberry Pi Camera V2
 * Raspbian
+* Raspberry Pi Camera V2
+* MJPEG
+* Inland 5,200mAh Power Bank
 
 
 ## Development Process
