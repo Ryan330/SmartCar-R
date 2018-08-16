@@ -16,7 +16,7 @@ const sPort = require("serialport");
 var robotPort = "/dev/ttyACM0";
 
 var myPort = new sPort(robotPort, {
-    baudRate: 115200
+    baudRate: 9600
 });
 
 
@@ -31,30 +31,35 @@ myPort.on("open", function robotStart() {console.log("Connection Started!")});
 //Idle
 app.get("/", function(request, response) {
     response.send(["Robot Idle!"]);
+    myPort.flush();
     myPort.write("k");
 });
 
 //Forward
 app.get("/up", function(request, response) {
     response.send(["Robot Forward!"]);
+    myPort.flush();
     myPort.write("w");
 });
 
 //Reverse
 app.get("/down", function(request, response) {
     response.send(["Robot Reverse!"]);
+    myPort.flush();
     myPort.write("s");
 });
 
 //Left
 app.get("/left", function(request, response) {
     response.send(["Robot Left!"]);
+    myPort.flush();
     myPort.write("a");
 });
 
 //Right
 app.get("/right", function(request, response) {
     response.send(["Robot Right!"]);
+    myPort.flush();
     myPort.write("d");
 });
 
@@ -63,12 +68,14 @@ app.get("/right", function(request, response) {
 //On
 app.get("/light-on", function(request, response) {
     response.send(["Robot Lights On!"]);
+    myPort.flush();
     myPort.write("l");
 });
 
 //Off
 app.get("/light-off", function(request, response) {
     response.send(["Robot Lights Off!"]);
+    myPort.flush();
     myPort.write("l");
 });
 
