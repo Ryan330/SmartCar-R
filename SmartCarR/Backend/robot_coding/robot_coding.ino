@@ -144,7 +144,7 @@ void setup() {
     pinMode(IN4,OUTPUT);
     pinMode(ENA,OUTPUT);
     pinMode(ENB,OUTPUT);
-    stop();
+    stopActions();
 }
 
 //Robot Controls
