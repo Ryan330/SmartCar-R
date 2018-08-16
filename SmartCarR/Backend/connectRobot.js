@@ -11,22 +11,12 @@ app.set("view engine", ".hbs");
 app.use(static("public"));
 
 
-
-
-//Init WebSocket
-const WebSocket = require("ws");
-
-const wss = new WebSocket.Server({
-    //port: 5001
-})
-
-
 //Init Serial Connection
 const sPort = require("serialport");
 var robotPort = "/dev/ttyACM0";
 
 var myPort = new sPort(robotPort, {
-    baudRate: 9600
+    baudRate: 115200
 });
 
 
@@ -88,13 +78,3 @@ app.get("/light-off", function(request, response) {
 app.listen(5000, function() {
     console.log("Server: http://localhost:5000");
 });
-
-wss.on("connection", function connection(ws) {
-    console.log("Websocket is connected " + ws);
-    ws.on("message", function command(data) {
-        console.log(data);
-        port.write(data);
-    });
-})
-  
-const server = require("http").createServer(app);

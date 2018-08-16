@@ -153,10 +153,13 @@ body {
 }
 
 .videoBox iframe {
-    height: 350px;
-    width: 590px;
+    height: 380px;
+    width: 620px;
 
-    border-radius: 14px;
+    margin: -20px;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
