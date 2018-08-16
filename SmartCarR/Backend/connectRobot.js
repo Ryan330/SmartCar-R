@@ -17,7 +17,7 @@ app.use(static("public"));
 const WebSocket = require("ws");
 
 const wss = new WebSocket.Server({
-    port: 3001
+    //port: 5001
 })
 
 
@@ -33,9 +33,6 @@ var myPort = new sPort(robotPort, {
 //Checks for Connection
 //Connection Started
 myPort.on("open", function robotStart() {console.log("Connection Started!")});
-
-//Connection Running
-//myPort.on("data", function robotData(data) {console.log(data.toString("utf8"))});
 
 
 

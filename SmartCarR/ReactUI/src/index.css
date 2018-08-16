@@ -152,6 +152,19 @@ body {
     box-shadow:         2px 2px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
+.videoBox iframe {
+    height: 350px;
+    width: 590px;
+
+    border-radius: 14px;
+
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 
 /*Controls Display Designs*/
 .controlsContainer {
