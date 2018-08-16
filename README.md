@@ -7,8 +7,8 @@ also displays a Raspberry Pi Camera's footage from a first-person perspective.
 This robot was created as my final DigitalCrafts project! The project was presented at the "Demo Day" public event in the Atlana 
 Tech Village facility. The name of the overall project is based on the robot's concept and developers name. (SmartCar-R | SmartCar-Ryan)
 
-<img src="screenshots/screen1" width="600" height="350"/>
-<img src="screenshots/screen2" width="600" height="350"/>
+<img src="screenshots/Screen1.jpg" width="600" height="350"/>
+<img src="screenshots/Screen2.jpg" width="600" height="350"/>
 
 ## Authors
 * **Ryan Miller** - [Ryan's GitHub](https://github.com/Ryan330)
