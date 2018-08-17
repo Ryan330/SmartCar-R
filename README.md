@@ -68,5 +68,10 @@ first Raspberry Pi and Arduino project which made it a bit of a tedious learning
 It was a rather great experience to quickly explore the possibilities of not only the hardware, but also the opportunities to work with new software and different languages with only 2 weeks until the set deadline.
 
 
+## Demo Video Footage
+Here is a short video of SmartCar-R in action! A big thank you to my good friend and DigitalCrafts classmate **Beth D'Amato**(https://github.com/badamato) for recording the video.
+<video src="videos/video.mp4"></video>
+
+
 ## License
 ### Copyright 2018 Ryan Miller
