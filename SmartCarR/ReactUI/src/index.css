@@ -156,8 +156,12 @@ body {
     height: 380px;
     width: 620px;
 
+    margin: -17px;
+
     overflow-x: hidden;
     overflow-y: hidden;
+
+    border-radius: 4px;
 
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
