@@ -52,7 +52,7 @@ Because the robot is ultimately manipulated by the Arduino module, the overall g
 module to produce a reaction with the robot. The Arduino module is coded in C++ to establish hardware functionality. The module then 
 waits for data to be given to it by the Node.js server.
 
-<img src="screenshots/screen4.png" width="380" height="380"/>
+<img src="screenshots/screen4.png" width="340" height="380"/>
 
 The Node.js server uses the Serial Port module to establish a wireless connection with the Raspberry Pi device. The data is then sent through Express.js "get()" requests to call the created C++ Arduino functions that were coded for hardware functionality.
 
