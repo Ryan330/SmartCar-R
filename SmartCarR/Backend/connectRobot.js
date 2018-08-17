@@ -16,7 +16,7 @@ const sPort = require("serialport");
 var robotPort = "/dev/ttyACM0";
 
 var myPort = new sPort(robotPort, {
-    baudRate: 115200
+    baudRate: 9600
 });
 
 

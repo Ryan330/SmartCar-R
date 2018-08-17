@@ -136,7 +136,7 @@ void lightToggle() {
 
 //Init Serial Connection
 void setup() {
-    Serial.begin(115200);
+    Serial.begin(9600);
     pinMode(LED, OUTPUT);
     pinMode(IN1,OUTPUT);
     pinMode(IN2,OUTPUT);
