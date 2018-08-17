@@ -70,7 +70,7 @@ It was a rather great experience to quickly explore the possibilities of not onl
 
 ## Demo Video Footage
 Here is a short video of SmartCar-R in action! A big thank you to my good friend and DigitalCrafts classmate [Beth D'Amato](https://github.com/badamato) for recording the video.
-<iframe src="videos/video.mp4"></iframe>
+<video src="videos/video.mp4"></video>
 
 
 ## License
