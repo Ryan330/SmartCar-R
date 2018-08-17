@@ -16,7 +16,7 @@ const sPort = require("serialport");
 var robotPort = "/dev/ttyACM0";
 
 var myPort = new sPort(robotPort, {
-    baudRate: 9600
+    baudRate: 115200
 });
 
 
@@ -31,11 +31,6 @@ myPort.on("open", function robotStart() {console.log("Connection Started!")});
 //Idle
 app.get("/", function(request, response) {
     response.send(["Robot Idle!"]);
-    myPort.flush("w");
-    myPort.flush("a");
-    myPort.flush("s");
-    myPort.flush("d");
-    myPort.flush("l");
     myPort.flush();
     myPort.write("k");
 });

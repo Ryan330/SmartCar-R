@@ -3,7 +3,7 @@ Note: Must be in Raspberry Pi's SSH terminal!
 
 -Command 1- (Create temporary directory and start Raspberry Pi stream)
 mkdir /tmp/stream
-raspistill --nopreview -w 590 -h 350 -q 5 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &
+raspistill -w 590 -h 350 -q 5 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &
 
 
 -Command 2- (Run video server)
