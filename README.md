@@ -58,7 +58,7 @@ The Node.js server uses the Serial Port module to establish a wireless connectio
 
 <img src="screenshots/screen3.png" width="600" height="380"/>
 
-The React user interface displays the live footage which is recorded by the attached Raspberry Pi Camera V2. The live stream begins with the "raspistill" Raspbian command. The footage is then displayed on the React user interface with an "<iframe>" HTML tag that references the Raspberry Pi's IP address and backend port number using the MJEPG process.
+The React user interface displays the live footage which is recorded by the attached Raspberry Pi Camera V2. The live stream begins with the "raspistill" Raspbian command. The footage is then displayed on the React user interface with an "<iframe>" HTML tag that references the Raspberry Pi's IP address and backend port number using the MJPEG process.
 
 ### -Project Challenges-
 During the development process, the biggest challenge overall was coding and establishing the wireless connection between the backend 
@@ -70,7 +70,7 @@ It was a rather great experience to quickly explore the possibilities of not onl
 
 ## Demo Video Footage
 Here is a short video of SmartCar-R in action! A big thank you to my good friend and DigitalCrafts classmate [Beth D'Amato](https://github.com/badamato) for recording the video.
-<video src="videos/video.mp4"></video>
+<video src="videos/video.mp4" controls preload></video>
 
 
 ## License
