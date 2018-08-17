@@ -41,7 +41,7 @@ manipulated by an Arduino module which receives data from a Raspberry Pi 3. The 
 complete control via a React application which displays a first-person view from the robot's Raspberry Pi Camera along with a control 
 layout to give the end-user directions regarding how to manipulate the robot.
 
-<img src="screenshots/screen5.jpg" width="600" height="380"/>
+<img src="screenshots/screen5.png" width="600" height="380"/>
 
 ### -Web Design-
 The SmartCar-R user interface is a React-based application that uses JavaScript, JSX, HTML, and CSS. The interface uses "fetch()" 
@@ -52,11 +52,11 @@ Because the robot is ultimately manipulated by the Arduino module, the overall g
 module to produce a reaction with the robot. The Arduino module is coded in C++ to establish hardware functionality. The module then 
 waits for data to be given to it by the Node.js server.
 
-<img src="screenshots/screen4.jpg" width="600" height="380"/>
+<img src="screenshots/screen4.png" width="600" height="380"/>
 
 The Node.js server uses the Serial Port module to establish a wireless connection with the Raspberry Pi device. The data is then sent through Express.js "get()" requests to call the created C++ Arduino functions that were coded for hardware functionality.
 
-<img src="screenshots/screen3.jpg" width="600" height="380"/>
+<img src="screenshots/screen3.jgn" width="600" height="380"/>
 
 The React user interface displays the live footage which is recorded by the attached Raspberry Pi Camera V2. The live stream begins with the "raspistill" Raspbian command. The footage is then displayed on the React user interface with an "<iframe>" HTML tag that references the Raspberry Pi's IP address and backend port number using the MJEPG process.
 
