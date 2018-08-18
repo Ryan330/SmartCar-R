@@ -47,6 +47,8 @@ layout to give the end-user directions regarding how to manipulate the robot.
 The SmartCar-R user interface is a React-based application that uses JavaScript, JSX, HTML, and CSS. The interface uses "fetch()" 
 requests to establish a connection between the front-end and the backend to ultimately manipulate the robot.
 
+<img src="screenshots/screen6.png" width="600" height="380"/>
+
 ### -Backend Development-
 Because the robot is ultimately manipulated by the Arduino module, the overall goal of the backend is to send data to the Arduino 
 module to produce a reaction with the robot. The Arduino module is coded in C++ to establish hardware functionality. The module then 
