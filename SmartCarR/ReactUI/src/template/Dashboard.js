@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
 
                     <div className="videoBox">
                         
-                        <iframe src="http://10.150.41.76:8080"></iframe>
+                        <iframe src="http://192.168.1.71:8080"></iframe>
 
                     </div>
 

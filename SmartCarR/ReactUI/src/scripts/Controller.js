@@ -6,8 +6,11 @@ import {Fragment, Component} from "react";
 let lightToggle = false;
 
 
-//Server
-const URL = "http://10.150.41.76:5000";
+//Server (Change based on network location)
+const URL = "http://192.168.1.71:5000";
+
+//Home http://192.168.1.71:5000
+//Atlanta Tech Village http://10.150.41.76:5000
 
 
 //Robot Controller
